@@ -1,12 +1,11 @@
-body {
-    background: black;
-}
+
 
 
 /* Header */
 
 header {
     position: fixed;
+    z-index: 999;
     backdrop-filter: blur(30px);
     box-shadow: 0px 0px 30px rgba(227,  228, 237, 0.37);
     border: 2px solid rgba(255, 255, 255, 0.18);
@@ -17,6 +16,11 @@ header {
     padding: 0 16px;
     width: 100vw;
     max-width: 100%;
+    transition: .3s ease;
+}
+
+header.scrolled {
+    background: var(--sec-blue);
 }
 
 header  .nav-links  {
@@ -47,9 +51,9 @@ header  .nav-links  {
 
 
 
-/* responsive */
+/*  header responsive */
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
 
     header nav {
         position: fixed;
